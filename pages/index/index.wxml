@@ -1,0 +1,93 @@
+<view class="page-body">
+<view class="page-body-wrapper">
+<canvas canvas-id="canvas" class="canvas"></canvas>
+</view>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+<view class="section section_gap flex-wrp " style="flex-direction:row;">
+<view class="section__title">机型</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+<view class="picker flex-item bc_red">
+{{array[index]}}
+<index name="index"/>
+</view>
+</picker>
+</view>
+<view class="section section_gap flex-wrp" style="flex-direction:row;">
+<view class="section__title">飞行机组</view>
+<picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+<view class="picker flex-item bc_red">
+{{array2[index2]}}
+<index name="index2"/>
+</view>
+</picker>
+</view>
+
+<view class="section section_gap flex-wrp" style="flex-direction:row;">
+<view class="section__title">飞行员数量</view>
+<picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+<view class="picker flex-item bc_red">
+{{array3[index3]}}
+<index name="index3"/>
+</view>
+</picker>
+</view>
+
+<view class="section section_gap flex-wrp" style="flex-direction:row;">
+<view class="section__title">休息设施</view>
+<picker bindchange="bindPickerChange4" value="{{index4}}" range="{{array4}}">
+<view class="picker flex-item bc_red">
+{{array4[index4]}}
+<index name="index4"/>
+</view>
+</picker>
+</view>
+
+
+<view class="section section_gap flex-wrp" style="flex-direction:row;">
+<view class="section__title">航段</view>
+<picker bindchange="bindPickerChange5" value="{{index5}}" range="{{array5}}">
+<view class="picker flex-item bc_red">
+{{array5[index5]}}
+<index name="index5"/>
+</view>
+</picker>
+</view>
+
+<view class="section flex-wrp" style="flex-direction:row">
+<view class="section__title">时间</view>
+<picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+<view class="picker flex-item bc_red">
+{{time}}
+</view>
+</picker>
+</view>
+
+<view class="section section_gap flex-wrp" style="flex-direction:row">
+<view class="section__title">日期</view>
+<picker mode="date" value="{{date}}" start="2020-01-01" end="2022-12-31" bindchange="bindDateChange">
+<view class="picker flex-item bc_red">
+{{date}}
+<index name="date"/>
+</view>
+</picker>
+</view>
+
+<view class="section flex-wrp" style="flex-direction:row">
+<view class="section__title">报道时间</view>
+<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+<view class="picker flex-item bc_red">
+{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+</view>
+</picker>
+</view>
+
+<view class="btn-area flex-wrp" style="flex-direction:row">
+<button formType="reset" plain="ture">重置</button>
+
+<view class='section'> </view>
+<button formType="submit" >提交</button>
+</view>
+</form>

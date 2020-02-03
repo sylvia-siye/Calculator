@@ -1,0 +1,14 @@
+/**index.wxss**/
+/**index.wxss**/
+
+.section__title {margin-left: 30px;margin-top: 10px;width: 200px;height: 30px;color: rgb(124, 123, 123)}
+.flex-wrp {display: flex;margin: 10px}
+.bc_green {background: white;width:200px; height: 30px;}
+.bc_red { margin-top: 10px;background: white;width:400px; height: 30px;}
+.picker{margin-left: 10px;margin-top: 10px;width: 150px;height: 30px;color: rgb(133, 25, 25)}
+button {margin: 30px; background-color:#213c61;color:white}
+.canvas {
+width: 505px;
+height: 30px;
+background-color: #213c61;
+}
